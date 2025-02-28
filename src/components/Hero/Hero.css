@@ -60,47 +60,6 @@
   z-index: 3;
 }
 
-.seeMyWorkLink {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--color-black);
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.seeMyWorkLink:hover {
-  transform: translateX(15px);
-}
-
-.seeMyWorkLink::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  background: var(--color-gray-btns);
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-
-.seeMyWorkLink::after {
-  content: "→";
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-.seeMyWorkLink:hover::before {
-  width: 130%;
-  border-radius: 30px;
-}
-
 .socialLinks {
   display: flex;
   margin-top: 50px;
@@ -214,7 +173,7 @@
     margin-bottom: 30px;
   }
 
-  .seeMyWorkLink {
+  .buttonLink {
     margin-bottom: 30px;
   }
 

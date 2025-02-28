@@ -4,7 +4,7 @@ import profilePic from "../../assets/profilePic.jpg";
 
 export default function Hero() {
   const handleScroll = () => {
-    const nextSection = document.getElementById("nextSection"); // TODO: Replace with the ID of your next section
+    const nextSection = document.getElementById("projectsSection"); 
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -19,7 +19,7 @@ export default function Hero() {
           enthusiast by night. I bring designs to life with code and craft
           visuals that tell a story.
         </p>
-        <a href="#" className="seeMyWorkLink">
+        <a href="#" className="buttonLink">
           SEE MY WORK
         </a>
         <div className="socialLinks">
