@@ -1,8 +1,8 @@
 import React from "react";
-import "./About.css";
+import "./Hero.css";
 import profilePic from "../../assets/profilePic.jpg";
 
-export default function About() {
+export default function Hero() {
   const handleScroll = () => {
     const nextSection = document.getElementById("nextSection"); // TODO: Replace with the ID of your next section
     if (nextSection) {
@@ -11,10 +11,10 @@ export default function About() {
   };
 
   return (
-    <div className="aboutContainer">
-      <div className="aboutContent">
-        <h1 className="aboutTitle">Hello there!</h1>
-        <p className="aboutDescription">
+    <div className="heroContainer">
+      <div className="heroContent">
+        <h1 className="heroTitle">Hello there!</h1>
+        <p className="heroDescription">
           I’m Snezhi – a frontend developer by day, a UI and graphic design
           enthusiast by night. I bring designs to life with code and craft
           visuals that tell a story.

@@ -29,7 +29,7 @@
   }
 }
 
-.aboutContainer {
+.heroContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,11 +38,11 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-.aboutContent {
+.heroContent {
   animation: slideInLeft 1s ease-in-out;
 }
 
-.aboutTitle {
+.heroTitle {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -50,7 +50,7 @@
   z-index: 3;
 }
 
-.aboutDescription {
+.heroDescription {
   font-size: 18px;
   color: var(--color-gray-text);
   max-width: 500px;
@@ -174,40 +174,40 @@
 }
 
 .scrollDownButton {
-    position: absolute;
-    right: -50px;
-    bottom: 80px;
-    padding: 0 20px;
-    transform: rotate(90deg);
-    transition: transform 0.3s ease-out;
-    cursor: pointer;
-    animation: fadeIn 1s ease-in-out;
+  position: absolute;
+  right: -50px;
+  bottom: 80px;
+  padding: 0 20px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .scrollDownButton:hover {
-    transform: rotate(90deg) translateX(15px);;
-    transition: transform 0.3s ease-in-out;
-    font-weight: bold;
-  }
+  transform: rotate(90deg) translateX(15px);
+  transition: transform 0.3s ease-in-out;
+  font-weight: bold;
+}
 
 @media screen and (max-width: 945px) {
-  .aboutContainer {
+  .heroContainer {
     flex-direction: column;
     padding: 20px;
     text-align: center;
   }
 
-  .aboutContent {
+  .heroContent {
     animation: none;
     order: 2;
   }
 
-  .aboutTitle {
+  .heroTitle {
     font-size: 36px;
     margin-bottom: 20px;
   }
 
-  .aboutDescription {
+  .heroDescription {
     font-size: 16px;
     max-width: 100%;
     line-height: 1.6;
