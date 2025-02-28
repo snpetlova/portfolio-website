@@ -1,0 +1,247 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 150px 20px 150px;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.aboutContent {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.aboutTitle {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.aboutDescription {
+  font-size: 18px;
+  color: var(--color-gray-text);
+  max-width: 500px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 3;
+}
+
+.seeMyWorkLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-black);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.seeMyWorkLink:hover {
+  transform: translateX(15px);
+}
+
+.seeMyWorkLink::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: var(--color-gray-btns);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.seeMyWorkLink::after {
+  content: "→";
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.seeMyWorkLink:hover::before {
+  width: 130%;
+  border-radius: 30px;
+}
+
+.socialLinks {
+  display: flex;
+  margin-top: 50px;
+  font-size: 16px;
+  position: relative;
+  z-index: 3;
+  gap: 20px;
+}
+
+.socialLink {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-gray-text);
+  margin-right: 10px;
+}
+
+.socialLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialLink:hover {
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.socialLink:hover::after {
+  transform: scaleX(1);
+}
+
+.imageSection {
+  position: relative;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.imageCircle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle {
+  width: 550px;
+  height: 550px;
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  filter: blur(8px);
+}
+
+.scrollDownButton {
+    position: absolute;
+    right: -50px;
+    bottom: 80px;
+    padding: 0 20px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.scrollDownButton:hover {
+    transform: rotate(90deg) translateX(15px);;
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 945px) {
+  .aboutContainer {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .aboutContent {
+    animation: none;
+    order: 2;
+  }
+
+  .aboutTitle {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .aboutDescription {
+    font-size: 16px;
+    max-width: 100%;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .seeMyWorkLink {
+    margin-bottom: 30px;
+  }
+
+  .socialLinks {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .imageSection {
+    animation: none;
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .imageCircle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle {
+    width: 320px;
+    height: 320px;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .scrollDownButton {
+    display: none;
+  }
+}
