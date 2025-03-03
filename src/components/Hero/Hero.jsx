@@ -4,7 +4,7 @@ import profilePic from "../../assets/profilePic.jpg";
 
 export default function Hero() {
   const handleScroll = () => {
-    const nextSection = document.getElementById("projectsSection"); 
+    const nextSection = document.getElementById("projectsSection");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -23,18 +23,27 @@ export default function Hero() {
           SEE MY WORK
         </a>
         <div className="socialLinks">
-          <a href="https://github.com/snpetlova" className="socialLink">
+          <a
+            href="https://github.com/snpetlova"
+            target="_blank"
+            className="socialLink"
+          >
             GitHub
           </a>
           <p>/</p>
           <a
             href="https://www.behance.net/snejanapetlova"
+            target="_blank"
             className="socialLink"
           >
             Behance
           </a>
           <p>/</p>
-          <a href="https://www.linkedin.com/in/spetlova" className="socialLink">
+          <a
+            href="https://www.linkedin.com/in/spetlova"
+            target="_blank"
+            className="socialLink"
+          >
             LinkedIn
           </a>
         </div>
