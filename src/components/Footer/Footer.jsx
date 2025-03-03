@@ -8,6 +8,13 @@ import linkedinWhite from "../../assets/linkedin-icon.png";
 import linkedinBlack from "../../assets/linkedin-icon-black.png";
 
 export default function Footer() {
+  const handleScroll = () => {
+    const previousSection = document.getElementById("heroSection");
+    if (previousSection) {
+      previousSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="footerContainer">
       <div className="footerContent">
@@ -70,6 +77,9 @@ export default function Footer() {
           />
         </a>
       </div>
+      <a className="scrollUpButton" onClick={handleScroll}>
+        ← SCROLL UP
+      </a>
     </div>
   );
 }

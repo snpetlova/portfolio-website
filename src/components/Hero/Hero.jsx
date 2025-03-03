@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="heroContainer">
+    <div className="heroContainer" id="heroSection">
       <div className="heroContent">
         <h1 className="heroTitle">Hello there!</h1>
         <p className="heroDescription">

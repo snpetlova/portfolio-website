@@ -100,6 +100,24 @@
   opacity: 1;
 }
 
+.scrollUpButton {
+  position: absolute;
+  right: -35px;
+  bottom: 85px;
+  padding: 0 20px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out;
+  color: var(--color-white);
+}
+
+.scrollUpButton:hover {
+  transform: rotate(90deg) translateX(-15px);
+  transition: transform 0.3s ease-in-out;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 740px) {
   .footerContainer {
     padding: 0 20px 20px 20px;
