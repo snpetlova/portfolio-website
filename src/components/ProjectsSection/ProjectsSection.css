@@ -152,3 +152,77 @@
 .viewAllProjects:hover {
   transform: translateX(5px);
 }
+
+
+@media screen and (max-width: 900px) {
+  .projectsSectionContainer {
+    padding: 30px 20px;
+  }
+
+  .projectsSectionTitle,
+  .projectsSectionDescription,
+  .projectsSectionFooter,
+  .viewAllProjects {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .projectsList {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projectItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .projectIndex {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .projectIndex::before {
+    display: none;
+  }
+
+  .projectDetails {
+    margin-bottom: 15px;
+  }
+
+  .projectTitle {
+    font-size: 22px;
+  }
+
+  .projectCategory {
+    font-size: 16px;
+  }
+
+  .buttonLink {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .projectImageContainer {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 280px;
+    opacity: 1;
+    margin-top: 15px;
+  }
+
+  .projectItem:hover .projectImageContainer {
+    transform: none;
+  }
+
+  .viewAllProjects {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+  }
+}
