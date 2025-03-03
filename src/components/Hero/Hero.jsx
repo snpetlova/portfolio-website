@@ -19,7 +19,7 @@ export default function Hero() {
           enthusiast by night. I bring designs to life with code and craft
           visuals that tell a story.
         </p>
-        <a href="#" className="buttonLink">
+        <a href="/projects" className="buttonLink">
           SEE MY WORK
         </a>
         <div className="socialLinks">

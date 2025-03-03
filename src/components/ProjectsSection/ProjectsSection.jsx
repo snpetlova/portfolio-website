@@ -57,7 +57,7 @@ export default function ProjectsSection() {
           ))}
         </div>
         <p className="projectsSectionFooter">THERE'S MORE</p>
-        <a href="#" className="viewAllProjects">
+        <a href="/projects" className="viewAllProjects">
           view all projects
         </a>
       </div>

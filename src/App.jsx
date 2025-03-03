@@ -5,6 +5,7 @@ import Hero from "./components/Hero/Hero.jsx";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import About from "./pages/About/About.jsx";
+import Projects from "./pages/Projects/Projects.jsx";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
       </Routes>
     </div>
   );
