@@ -9,7 +9,7 @@ import linkedinBlack from "../../assets/linkedin-icon-black.png";
 
 export default function Footer() {
   const handleScroll = () => {
-    const previousSection = document.getElementById("heroSection");
+    const previousSection = document.getElementById("navbar");
     if (previousSection) {
       previousSection.scrollIntoView({ behavior: "smooth" });
     }

@@ -10,13 +10,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="navbar">
       <div className="hamburgerMenuIcon" onClick={toggleMenu}>
         ☰
       </div>
       <ul className={isOpen ? "navLinks open" : "navLinks"}>
         <li>
-          <Link to="/" onClick={() => setIsOpen(false)}>
+          <Link to="/about" onClick={() => setIsOpen(false)}>
             About
           </Link>
         </li>

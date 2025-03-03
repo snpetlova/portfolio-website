@@ -4,6 +4,7 @@ import "./App.css";
 import Hero from "./components/Hero/Hero.jsx";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import About from "./pages/About/About.jsx";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
     </div>
   );
