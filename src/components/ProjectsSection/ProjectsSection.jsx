@@ -1,28 +1,28 @@
 import React from "react";
 import "./ProjectsSection.css";
+import flavorFiestaImg from "../../assets/flavor-fiesta.png";
+import movieRatingImg from "../../assets/movie-rating-app.png";
+import memoryGameImg from "../../assets/memory-game.png";
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "Memory game",
-      category: "UI / UX",
-      link: "#",
-      image:
-        "https://codingweek.org/wp-content/uploads/2023/09/chris-ried-ieic5Tq8YMk-unsplash-scaled.jpg",
+      title: "Flavor Fiesta",
+      category: "WEB APP",
+      link: "/projects/1",
+      image: flavorFiestaImg,
     },
     {
-      title: "Recipe website",
-      category: "UI / UX",
-      link: "#",
-      image:
-        "https://codingweek.org/wp-content/uploads/2023/09/chris-ried-ieic5Tq8YMk-unsplash-scaled.jpg",
+      title: "Movie Rating App",
+      category: "WEB APP",
+      link: "/projects/2",
+      image: movieRatingImg,
     },
     {
-      title: "Recipe website",
-      category: "UI / UX",
-      link: "#",
-      image:
-        "https://codingweek.org/wp-content/uploads/2023/09/chris-ried-ieic5Tq8YMk-unsplash-scaled.jpg",
+      title: "Memory Game",
+      category: "WEB APP",
+      link: "/projects/3",
+      image: memoryGameImg,
     },
   ];
 

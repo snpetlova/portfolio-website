@@ -9,6 +9,17 @@
     }
   }
 
+  @keyframes slideInBottom {
+    from {
+      transform: translateY(100%); 
+      opacity: 0; 
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1; 
+    }
+  }
+
 .projectsPageContainer {
   padding: 50px 20px;
   animation: fadeIn 1s ease-in-out;
@@ -17,7 +28,7 @@
 .projectsPageContent {
   max-width: 1200px;
   margin: 0 auto;
-  animation: slideInTop 1s ease-in-out;
+  animation: slideInBottom 1s ease-out forwards;
 }
 
 .projectsPageTitle {

@@ -6,6 +6,8 @@ import ProjectsSection from "./components/ProjectsSection/ProjectsSection.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import About from "./pages/About/About.jsx";
 import Projects from "./pages/Projects/Projects.jsx";
+import ProjectDetails from "./pages/projectDetails/projectDetails.jsx";
+
 
 function Home() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/projects/:projectId" element={<ProjectDetails />}></Route>
       </Routes>
     </div>
   );

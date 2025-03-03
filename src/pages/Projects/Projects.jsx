@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Projects.css";
 import Footer from "../../components/Footer/Footer";
 import flavorFiestaImg from "../../assets/flavor-fiesta.png";
@@ -12,6 +13,7 @@ import financeTrackerImg from "../../assets/finance-tracker.png";
 export default function Projects() {
   const projects = [
     {
+      id: 1,
       title: "Flavor Fiesta",
       category: "WEB APP",
       link: "#",
@@ -20,6 +22,7 @@ export default function Projects() {
         "A recipe website where users can explore, save, and edit their favorite recipes.",
     },
     {
+      id: 2,
       title: "Movie Rating App",
       category: "WEB APP",
       link: "#",
@@ -28,6 +31,7 @@ export default function Projects() {
         "A movie rating web application built using React and TypeScript with Vite. It allows users to rate and review movies.",
     },
     {
+      id: 3,
       title: "Memory Game",
       category: "WEB APP",
       link: "#",
@@ -36,6 +40,7 @@ export default function Projects() {
         "A simple and interactive memory card game built with React. The game challenges players to find matching pairs of cards by flipping them over.",
     },
     {
+      id: 4,
       title: "Photographer Website UI",
       category: "UX/UI",
       link: "#",
@@ -44,6 +49,7 @@ export default function Projects() {
         "User Interface Design for a photographer website. It shows pages as About, Portfolio, Prices and Contact.",
     },
     {
+      id: 5,
       title: "Online Marketplace",
       category: "UX/UI",
       link: "#",
@@ -52,6 +58,7 @@ export default function Projects() {
         "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
     },
     {
+      id: 6,
       title: "Recipes Website",
       category: "WEB APP",
       link: "#",
@@ -60,6 +67,7 @@ export default function Projects() {
         "This is a Java Spring project for a recipe website developed as a university project.",
     },
     {
+      id: 7,
       title: "Finance Tracker App",
       category: "WEB APP",
       link: "#",
@@ -68,6 +76,7 @@ export default function Projects() {
         "A Finance Tracker Application that helps users keep track of their income, expenses, and overall financial status.",
     },
     {
+      id: 8,
       title: "Chat App",
       category: "WEB APP",
       link: "#",
@@ -86,8 +95,8 @@ export default function Projects() {
             Here is a list of my projects.
           </p>
           <div className="projectsGrid">
-            {projects.map((project, index) => (
-              <div key={index} className="projectCard">
+            {projects.map((project) => (
+              <div key={project.id} className="projectCard">
                 <div className="projectsPageImageContainer">
                   <img
                     src={project.image}
@@ -99,12 +108,12 @@ export default function Projects() {
                   <h2 className="projectTitle">{project.title}</h2>
                   <p className="projectCategory">{project.category}</p>
                   <p className="projectDescription">{project.description}</p>
-                  <a
-                    href={project.link}
+                  <Link
+                    to={`/projects/${project.id}`}
                     className="buttonLink buttonLink-projects"
                   >
                     VIEW PROJECT
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
