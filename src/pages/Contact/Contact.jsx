@@ -104,6 +104,7 @@ export default function Contact() {
           Send Message
         </button>
       </form>
+      
       <div className="footerLinks-contact">
         <a
           href="https://github.com/snpetlova"

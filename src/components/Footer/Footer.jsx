@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="footerContent">
         <h1 className="footerTitle">Let's work together.</h1>
         <p className="footerDescription">I’m available for freelance work.</p>
-        <a href="#" className="buttonLink buttonLink-footer">
+        <a href="/contact" className="buttonLink buttonLink-footer">
           SAY HELLO
         </a>
       </div>
