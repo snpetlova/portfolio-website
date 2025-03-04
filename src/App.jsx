@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import About from "./pages/About/About.jsx";
 import Projects from "./pages/Projects/Projects.jsx";
 import ProjectDetails from "./pages/projectDetails/projectDetails.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
 
 
 function Home() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/projects/:projectId" element={<ProjectDetails />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </div>
   );

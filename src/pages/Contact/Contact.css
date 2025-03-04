@@ -1,0 +1,125 @@
+.contactContainer {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.contactTitle {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.contactDescription {
+  font-size: 18px;
+  color: var(--color-gray-text);
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactFormInput,
+.contactFormMessage {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid var(--color-gray-btns);
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contactFormInput:focus,
+.contactFormMessage:focus {
+  border-bottom: 2px solid var(--color-black);
+}
+
+.contactFormMessage {
+  min-height: 120px;
+  resize: none;
+}
+
+.contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: #222;
+}
+
+.contactBtn::after {
+  content: "➤";
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.contactBtn:hover::after {
+  transform: translateX(5px);
+}
+
+.statusMessage {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.statusMessage.success {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.statusMessage.error {
+  color: var(--color-error);
+  background: var(--color-error-bg);
+}
+
+.footerLinks-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 8px 0;
+  background-color: var(--color-bg-footer);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    width: 90%;
+  }
+
+  .contactTitle {
+    font-size: 36px;
+  }
+
+  .contactDescription {
+    font-size: 16px;
+  }
+}

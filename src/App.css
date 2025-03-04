@@ -8,6 +8,11 @@
   --color-bg-footer: #141414;
   --color-footer-btns: #323232;
   --color-footer-text: #dadada;
+  --color-success: #0a8a0a;
+  --color-error: #c0392b;
+  --color-success-bg: rgba(10, 138, 10, 0.1);
+  --color-error-bg: rgba(192, 57, 43, 0.1);
+
 }
 
 * {
@@ -19,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--background-color);
 }
 
 .App {
