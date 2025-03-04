@@ -8,6 +8,7 @@ import About from "./pages/About/About.jsx";
 import Projects from "./pages/Projects/Projects.jsx";
 import ProjectDetails from "./pages/projectDetails/projectDetails.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
+import NotFound from "./pages/404/NotFound.jsx";
 
 
 function Home() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/projects/:projectId" element={<ProjectDetails />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
