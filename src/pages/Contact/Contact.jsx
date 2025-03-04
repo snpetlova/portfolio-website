@@ -104,60 +104,6 @@ export default function Contact() {
           Send Message
         </button>
       </form>
-      
-      <div className="footerLinks-contact">
-        <a
-          href="https://github.com/snpetlova"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footerIconWrapper"
-        >
-          <img
-            src={githubWhite}
-            alt="GitHub"
-            className="footerIcon defaultIcon"
-          />
-          <img
-            src={githubBlack}
-            alt="GitHub"
-            className="footerIcon hoverIcon"
-          />
-        </a>
-        <a
-          href="https://www.behance.net/snejanapetlova"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footerIconWrapper"
-        >
-          <img
-            src={behanceWhite}
-            alt="Behance"
-            className="footerIcon defaultIcon"
-          />
-          <img
-            src={behanceBlack}
-            alt="Behance"
-            className="footerIcon hoverIcon"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/spetlova"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footerIconWrapper"
-        >
-          <img
-            src={linkedinWhite}
-            alt="LinkedIn"
-            className="footerIcon defaultIcon"
-          />
-          <img
-            src={linkedinBlack}
-            alt="LinkedIn"
-            className="footerIcon hoverIcon"
-          />
-        </a>
-      </div>
     </div>
   );
 }

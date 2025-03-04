@@ -1,9 +1,21 @@
 .navbar {
   display: flex;
-  justify-content: flex-end;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   margin-right: 100px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  margin-left: 30px;
 }
 
 .navLinks {

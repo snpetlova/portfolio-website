@@ -98,19 +98,6 @@
   background: var(--color-error-bg);
 }
 
-.footerLinks-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-  padding: 8px 0;
-  background-color: var(--color-bg-footer);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
 @media (max-width: 768px) {
   .contactContainer {
     width: 90%;
