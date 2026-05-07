@@ -9,7 +9,7 @@ import onlineMarketImg from "../../assets/online-marketplace.png";
 import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
 import financeTrackerImg from "../../assets/finance-tracker.png";
 import Footer from "../../components/Footer/Footer";
-import aestheticsBarImg from "../../assets/aestheticBar.png";
+import vistarailImg from "../../assets/vistarailImg.png";
 
 const projects = [
   {
@@ -56,8 +56,34 @@ const projects = [
     deployedAppLink: "https://rateyourfavourites.netlify.app/",
     behanceLink: null,
   },
+
   {
     id: 3,
+    title: "Social Media Design",
+    category: "Graphic Design",
+    image: vistarailImg,
+    details:
+      "VistaRail is a company specializing in glass facades and railing. As their dedicated graphic designer for social media, my role is to create a cohesive visual identity across Instagram and other digital platforms.",
+    toolsAndTechnologies: ["Figma", "Photoshop"],
+    sourceCodeLink: null,
+    deployedAppLink: null,
+    behanceLink: null,
+  },
+  {
+    id: 4,
+    title: "Online Marketplace UI",
+    category: "UX/UI",
+    image: onlineMarketImg,
+    details:
+      "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
+    toolsAndTechnologies: ["Figma"],
+    sourceCodeLink: null,
+    deployedAppLink: null,
+    behanceLink:
+      "https://www.behance.net/gallery/147900449/Online-Marketplace-UI-Design",
+  },
+  {
+    id: 5,
     title: "Memory Game",
     category: "WEB APP",
     image: memoryGameImg,
@@ -67,19 +93,6 @@ const projects = [
     sourceCodeLink: "https://github.com/snpetlova/memory-game-app",
     deployedAppLink: "https://snpetlova.github.io/memory-game-app/",
     behanceLink: null,
-  },
-  {
-    id: 4,
-    title: "Social Media Design",
-    category: "Graphic Design",
-    image: aestheticsBarImg,
-    details:
-      "Aesthetic Bar is a modern beauty studio specializing in laser hair removal and aesthetic treatments. As their dedicated graphic designer for social media, my role is to create a cohesive visual identity across Instagram and other digital platforms.",
-    toolsAndTechnologies: ["Figma", "Photoshop"],
-    sourceCodeLink: null,
-    deployedAppLink: null,
-    behanceLink:
-      "https://www.behance.net/gallery/234811793/LASER-HAIR-REMOVAL-SOCIAL-MEDIA-POSTS",
   },
   {
     id: 5,
@@ -94,19 +107,7 @@ const projects = [
     behanceLink:
       "https://www.behance.net/gallery/149940481/Photographer-Website-Design-FIGMA",
   },
-  {
-    id: 6,
-    title: "Online Marketplace UI",
-    category: "UX/UI",
-    image: onlineMarketImg,
-    details:
-      "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
-    toolsAndTechnologies: ["Figma"],
-    sourceCodeLink: null,
-    deployedAppLink: null,
-    behanceLink:
-      "https://www.behance.net/gallery/147900449/Online-Marketplace-UI-Design",
-  },
+
   {
     id: 7,
     title: "Recipes Website",
@@ -155,7 +156,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Finance Tracker App",
+    title: "Chat App",
     category: "WEB APP",
     image: projectPlaceholderImg,
     details:

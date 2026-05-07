@@ -2,7 +2,7 @@ import React from "react";
 import "./ProjectsSection.css";
 import flavorFiestaImg from "../../assets/flavor-fiesta.png";
 import movieRatingImg from "../../assets/movie-rating-app.png";
-import memoryGameImg from "../../assets/memory-game.png";
+import onlineMarketImg from "../../assets/online-marketplace.png";
 
 export default function ProjectsSection() {
   const projects = [
@@ -19,10 +19,10 @@ export default function ProjectsSection() {
       image: movieRatingImg,
     },
     {
-      title: "Memory Game",
-      category: "WEB APP",
-      link: "/projects/3",
-      image: memoryGameImg,
+      title: "Online Marketplace",
+      category: "UX/UI",
+      link: "/projects/4",
+      image: onlineMarketImg,
     },
   ];
 

@@ -9,7 +9,7 @@ import photographerImg from "../../assets/photographer.png";
 import onlineMarketImg from "../../assets/online-marketplace.png";
 import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
 import financeTrackerImg from "../../assets/finance-tracker.png";
-import aestheticsBarImg from "../../assets/aestheticBar.png";
+import vistarailImg from "../../assets/vistarailImg.png";
 
 export default function Projects() {
   const projects = [
@@ -33,21 +33,30 @@ export default function Projects() {
     },
     {
       id: 3,
+      title: "Social Media Design",
+      category: "Graphic Design",
+      link: "https://www.instagram.com/vistarail/",
+      image: vistarailImg,
+      description:
+        "Graphic design for social media, showcasing visual identity across Instagram and other digital platforms.",
+    },
+    {
+      id: 4,
+      title: "Online Marketplace",
+      category: "UX/UI",
+      link: "#",
+      image: onlineMarketImg,
+      description:
+        "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
+    },
+    {
+      id: 5,
       title: "Memory Game",
       category: "WEB APP",
       link: "#",
       image: memoryGameImg,
       description:
         "A simple and interactive memory card game built with React. The game challenges players to find matching pairs of cards by flipping them over.",
-    },
-    {
-      id: 4,
-      title: "Social Media Design",
-      category: "Graphic Design",
-      link: "https://www.instagram.com/_aesthetic.bar/",
-      image: aestheticsBarImg,
-      description:
-        "Graphic design for social media, showcasing visual identity across Instagram and other digital platforms.",
     },
     {
       id: 5,
@@ -58,15 +67,7 @@ export default function Projects() {
       description:
         "User Interface Design for a photographer website. It shows pages as About, Portfolio, Prices and Contact.",
     },
-    {
-      id: 6,
-      title: "Online Marketplace",
-      category: "UX/UI",
-      link: "#",
-      image: onlineMarketImg,
-      description:
-        "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
-    },
+
     {
       id: 7,
       title: "Recipes Website",
