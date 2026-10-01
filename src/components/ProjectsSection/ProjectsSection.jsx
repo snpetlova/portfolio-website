@@ -2,27 +2,27 @@ import React from "react";
 import "./ProjectsSection.css";
 import flavorFiestaImg from "../../assets/flavor-fiesta.png";
 import movieRatingImg from "../../assets/movie-rating-app.png";
-import onlineMarketImg from "../../assets/online-marketplace.png";
+import invioraImg from "../../assets/invioraImg.png";
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "Flavor Fiesta",
+      title: "Inviora",
       category: "WEB APP",
       link: "/projects/1",
+      image: invioraImg,
+    },
+    {
+      title: "Flavor Fiesta",
+      category: "WEB APP",
+      link: "/projects/2",
       image: flavorFiestaImg,
     },
     {
       title: "Movie Rating App",
       category: "WEB APP",
-      link: "/projects/2",
+      link: "/projects/3",
       image: movieRatingImg,
-    },
-    {
-      title: "Online Marketplace",
-      category: "UX/UI",
-      link: "/projects/4",
-      image: onlineMarketImg,
     },
   ];
 

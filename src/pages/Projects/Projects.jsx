@@ -10,11 +10,21 @@ import onlineMarketImg from "../../assets/online-marketplace.png";
 import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
 import financeTrackerImg from "../../assets/finance-tracker.png";
 import vistarailImg from "../../assets/vistarailImg.png";
+import invioraImg from "../../assets/invioraImg.png";
 
 export default function Projects() {
   const projects = [
-    {
+     {
       id: 1,
+      title: "Inviora",
+      category: "WEB APP",
+      link: "#",
+      image: invioraImg,
+      description:
+        "A website for digital invites for every occasion. People pick a design, pay, fill in a short form, and get a live, personalised invitation website with RSVPs built in.",
+    },
+    {
+      id: 2,
       title: "Flavor Fiesta",
       category: "WEB APP",
       link: "#",
@@ -23,7 +33,7 @@ export default function Projects() {
         "A recipe website where users can explore, save, and edit their favorite recipes.",
     },
     {
-      id: 2,
+      id: 3,
       title: "Movie Rating App",
       category: "WEB APP",
       link: "#",
@@ -32,7 +42,7 @@ export default function Projects() {
         "A movie rating web application built using React and TypeScript with Vite. It allows users to rate and review movies.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Social Media Design",
       category: "Graphic Design",
       link: "https://www.instagram.com/vistarail/",
@@ -41,7 +51,7 @@ export default function Projects() {
         "Graphic design for social media, showcasing visual identity across Instagram and other digital platforms.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Online Marketplace",
       category: "UX/UI",
       link: "#",
@@ -50,7 +60,7 @@ export default function Projects() {
         "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
     },
     {
-      id: 5,
+      id: 6,
       title: "Memory Game",
       category: "WEB APP",
       link: "#",
@@ -59,7 +69,7 @@ export default function Projects() {
         "A simple and interactive memory card game built with React. The game challenges players to find matching pairs of cards by flipping them over.",
     },
     {
-      id: 5,
+      id: 7,
       title: "Photographer Website UI",
       category: "UX/UI",
       link: "#",
@@ -69,7 +79,7 @@ export default function Projects() {
     },
 
     {
-      id: 7,
+      id: 8,
       title: "Recipes Website",
       category: "WEB APP",
       link: "#",
@@ -78,7 +88,7 @@ export default function Projects() {
         "This is a Java Spring project for a recipe website developed as a university project.",
     },
     {
-      id: 8,
+      id: 9,
       title: "Finance Tracker App",
       category: "WEB APP",
       link: "#",
@@ -87,7 +97,7 @@ export default function Projects() {
         "A Finance Tracker Application that helps users keep track of their income, expenses, and overall financial status.",
     },
     {
-      id: 9,
+      id: 10,
       title: "Chat App",
       category: "WEB APP",
       link: "#",

@@ -10,10 +10,111 @@ import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
 import financeTrackerImg from "../../assets/finance-tracker.png";
 import Footer from "../../components/Footer/Footer";
 import vistarailImg from "../../assets/vistarailImg.png";
+import invioraImg from "../../assets/invioraImg.png";
+import invioraImg2 from "../../assets/invioraImg2.png";
+import invioraMacMockup from "../../assets/invioraMacMockup.png";
+import invioraPhoneMockup from "../../assets/invioraPhoneMockup.png";
+import invioraVisualIdentity from "../../assets/invioraVisualIdentity.png";
 
 const projects = [
   {
     id: 1,
+    title: "Inviora",
+    category: "WEB APP",
+    image: invioraImg2,
+    details:
+      "Inviora is my own digital invitation business, which I designed and built from scratch. You pick a design you love, pay, fill in a short form, and get your own invitation website, with RSVPs already set up. It started with weddings and proms, and I plan to add more occasions over time. I designed every invitation, the brand and the website myself, then built the whole product with Claude Code as my engineering partner.",
+    toolsAndTechnologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "PostgreSQL",
+      "Stripe Checkout",
+      "Resend",
+      "Docker",
+      "k3s (Kubernetes) on a NAS",
+      "Figma",
+    ],  
+    deployedAppLink: "/",
+    overview: [
+      { label: "Role", value: "Brand, UX/UI design & development" },
+      { label: "Status", value: "Launching soon" },
+      { label: "Occasions", value: "Weddings & proms (more to come)" },
+      { label: "Languages", value: "Bulgarian & English" },
+    ],
+    caseStudy: [
+      {
+        heading: "Why I built it",
+        text: [
+           "For a long time I wanted to make something that was completely mine: my designs, my brand, my product. Digital invitations turned out to be the right fit.",
+          "When I looked around, I kept seeing the same two options. One was template builders where every invitation ends up looking alike. The other was custom design work that costs far more than most people want to spend on an invitation. Hardly any of them handled RSVPs well, and almost none worked in two languages, which matters a lot when half the family lives abroad.",
+          "So I decided to build the thing I couldn't find: a small collection of invitations I design myself, personalised for each customer, with RSVPs built in and an optional second language.",
+        ],
+      },
+      {
+        heading: "Who it's for",
+        points: [
+          {
+            title: "Hosts",
+            text: "Couples, students going to prom, and often their parents. They want something beautiful without having to learn a website builder, and an easy way to see who's coming.",
+          },
+          {
+            title: "Guests",
+            text: "They open a link on their phone, read the details and reply in a few taps.",
+          },
+          {
+            title: "Me, as the operator",
+            text: "I run this on my own, so it had to stay manageable and not turn into a full-time support job.",
+          },
+        ],
+      },
+      {
+        heading: "Design Process",
+        text: [
+          "I designed everything myself, from the first rough sketches to the finished screens: the customer journey, the brand, the website and every single invitation. I worked in Figma, then built each design as its own component, so what you see live is exactly what I drew.",
+        ],
+        images: [
+          { src: invioraVisualIdentity, alt: "Inviora Visual Identity"},
+        ],
+        textAfter: [
+          "People come to Inviora while planning one of the biggest days of their lives, so the brand had to feel warm, elegant and trustworthy from the first click.",
+        ],
+      },
+      {
+        heading: "Design decisions",
+        points: [
+          {
+            title: "Hosts choose their sections",
+            text: "Not everyone has a love story to tell or a schedule to share. The form lets hosts switch off the sections they don't need, so an invitation never goes out with empty blocks.",
+          },
+          {
+            title: "Mobile first",
+            text: "Almost every guest opens their invitation on a phone, so I designed and tested everything at the smallest screen sizes first.",
+          },
+          {
+            title: "Bilingual previews",
+            text: "Each design can be switched between Bulgarian and English before buying, so people see the language add-on in action.",
+          },
+          {
+            title: "A QR code on go-live",
+            text: "Lots of people still like sending paper cards, so when an invitation goes live hosts get a QR code they can print on them.",
+          },
+        ],
+        images: [{ src: invioraMacMockup, alt: "Inviora invite mockup" }],
+      },
+      {
+        heading: "The website",
+        text: "The website is where people first meet Inviora. It has a home page, a catalogue of designs you can filter by occasion, a page for each design with a live preview, plus about and contact pages.",
+      },
+      {
+        heading: "Under the hood",
+        text: "Everything runs in one Next.js app: the shop, the details form, my admin panel and every customer's invitation. When someone visits names.inviora.bg, the app works out whose invitation that is and shows it. That means adding a new customer is just a new row in the database, with no deploy needed. Photos and data live on my own server at home. For payments and email I use hosted services, because those are things I'd rather not run myself.",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Flavor Fiesta",
     category: "WEB APP",
     image: flavorFiestaImg,
@@ -37,7 +138,7 @@ const projects = [
     deployedAppLink: "https://flavor-fiesta-fe.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Movie Rating App",
     category: "WEB APP",
     image: movieRatingImg,
@@ -58,7 +159,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Social Media Design",
     category: "Graphic Design",
     image: vistarailImg,
@@ -70,7 +171,7 @@ const projects = [
     behanceLink: null,
   },
   {
-    id: 4,
+    id: 5,
     title: "Online Marketplace UI",
     category: "UX/UI",
     image: onlineMarketImg,
@@ -83,7 +184,7 @@ const projects = [
       "https://www.behance.net/gallery/147900449/Online-Marketplace-UI-Design",
   },
   {
-    id: 5,
+    id: 6,
     title: "Memory Game",
     category: "WEB APP",
     image: memoryGameImg,
@@ -95,7 +196,7 @@ const projects = [
     behanceLink: null,
   },
   {
-    id: 5,
+    id: 7,
     title: "Photographer Website UI",
     category: "UX/UI",
     image: photographerImg,
@@ -109,7 +210,7 @@ const projects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Recipes Website",
     category: "WEB APP",
     image: projectPlaceholderImg,
@@ -129,7 +230,7 @@ const projects = [
     behanceLink: null,
   },
   {
-    id: 8,
+    id: 9,
     title: "Finance Tracker App",
     category: "WEB APP",
     image: financeTrackerImg,
@@ -155,7 +256,7 @@ const projects = [
     behanceLink: null,
   },
   {
-    id: 9,
+    id: 10,
     title: "Chat App",
     category: "WEB APP",
     image: projectPlaceholderImg,
@@ -167,6 +268,104 @@ const projects = [
     behanceLink: null,
   },
 ];
+
+const toParagraphs = (text) => [].concat(text || []);
+
+function CaseStudy({ project }) {
+  return (
+    <div className="caseStudy">
+      <p className="caseStudyIntro">{project.details}</p>
+
+      {project.overview && (
+        <dl className="caseStudyOverview">
+          {project.overview.map((item) => (
+            <div key={item.label} className="caseStudyOverviewItem">
+              <dt className="caseStudyLabel">{item.label}</dt>
+              <dd className="caseStudyOverviewValue">{item.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+
+      {project.caseStudy.map((section, index) => (
+        <section key={section.heading} className="caseStudySection">
+          <header className="caseStudySectionHeader">
+            <span className="caseStudyLabel">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <h2 className="caseStudyHeading">{section.heading}</h2>
+          </header>
+
+          <div className="caseStudyBody">
+            {toParagraphs(section.text).map((paragraph, i) => (
+              <p key={i} className="caseStudyText">
+                {paragraph}
+              </p>
+            ))}
+
+            {section.points?.length > 0 && (
+              <ul className="caseStudyPoints">
+                {section.points.map((point) => (
+                  <li key={point.title} className="caseStudyPoint">
+                    <h3 className="caseStudyPointTitle">{point.title}</h3>
+                    <p className="caseStudyPointText">{point.text}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {section.images?.length > 0 && (
+            <div
+              className={`caseStudyImages ${
+                section.images.length > 1 ? "caseStudyImages-grid" : ""
+              }`}
+            >
+              {section.images.map((image, i) => (
+                <figure key={i} className="caseStudyFigure">
+                  <img
+                    src={image.src}
+                    alt={image.alt || section.heading}
+                    className="caseStudyImage"
+                  />
+                  {image.caption && (
+                    <figcaption className="caseStudyCaption">
+                      {image.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
+          )}
+
+          {section.textAfter && (
+            <div className="caseStudyBody">
+              {toParagraphs(section.textAfter).map((paragraph, i) => (
+                <p key={i} className="caseStudyText">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+
+      <section className="caseStudySection">
+        <header className="caseStudySectionHeader">
+          <span className="caseStudyLabel">Stack</span>
+          <h2 className="caseStudyHeading">Tools & Technologies</h2>
+        </header>
+        <ul className="caseStudyBody caseStudyTags">
+          {project.toolsAndTechnologies.map((tool) => (
+            <li key={tool} className="caseStudyTag">
+              {tool}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
+}
 
 export default function ProjectDetails() {
   const { projectId } = useParams();
@@ -189,13 +388,21 @@ export default function ProjectDetails() {
               className="projectDetailsImage"
             />
           </div>
-          <p className="projectDetailsText">{project.details}</p>
-          <div className="toolsAndTechnologies">
-            <h3 className="toolsAndTechnologiesTitle">Tools & Technologies</h3>
-            <p className="toolsAndTechnologiesDesc">
-              {project.toolsAndTechnologies.join(" / ")}
-            </p>
-          </div>
+          {project.caseStudy ? (
+            <CaseStudy project={project} />
+          ) : (
+            <>
+              <p className="projectDetailsText">{project.details}</p>
+              <div className="toolsAndTechnologies">
+                <h3 className="toolsAndTechnologiesTitle">
+                  Tools & Technologies
+                </h3>
+                <p className="toolsAndTechnologiesDesc">
+                  {project.toolsAndTechnologies.join(" / ")}
+                </p>
+              </div>
+            </>
+          )}
           <div className="projectButtons">
             {project.sourceCodeLink && (
               <a
