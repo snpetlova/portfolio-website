@@ -1,20 +1,20 @@
 import React, { useRef } from "react";
 import "./ProjectDetails.css";
 import { useParams } from "react-router-dom";
-import flavorFiestaImg from "../../assets/flavor-fiesta.png";
-import movieRatingImg from "../../assets/movie-rating-app.png";
-import memoryGameImg from "../../assets/memory-game.png";
-import photographerImg from "../../assets/photographer.png";
-import onlineMarketImg from "../../assets/online-marketplace.png";
+import flavorFiestaImg from "../../assets/flavor-fiesta.webp";
+import movieRatingImg from "../../assets/movie-rating-app.webp";
+import memoryGameImg from "../../assets/memory-game.webp";
+import photographerImg from "../../assets/photographer.webp";
+import onlineMarketImg from "../../assets/online-marketplace.webp";
 import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
-import financeTrackerImg from "../../assets/finance-tracker.png";
+import financeTrackerImg from "../../assets/finance-tracker.webp";
 import Footer from "../../components/Footer/Footer";
-import vistarailImg from "../../assets/vistarailImg.png";
-import invioraImg from "../../assets/invioraImg.png";
-import invioraImg2 from "../../assets/invioraImg2.png";
-import invioraMacMockup from "../../assets/invioraMacMockup.png";
-import invioraPhoneMockup from "../../assets/invioraPhoneMockup.png";
-import invioraVisualIdentity from "../../assets/invioraVisualIdentity.png";
+import vistarailImg from "../../assets/vistarailImg.webp";
+import invioraImg from "../../assets/invioraImg.webp";
+import invioraImg2 from "../../assets/invioraImg2.webp";
+import invioraMacMockup from "../../assets/invioraMacMockup.webp";
+import invioraPhoneMockup from "../../assets/invioraPhoneMockup.webp";
+import invioraVisualIdentity from "../../assets/invioraVisualIdentity.webp";
 
 const projects = [
   {
@@ -328,6 +328,7 @@ function CaseStudy({ project }) {
                     src={image.src}
                     alt={image.alt || section.heading}
                     className="caseStudyImage"
+                    loading="lazy"
                   />
                   {image.caption && (
                     <figcaption className="caseStudyCaption">

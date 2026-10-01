@@ -28,7 +28,7 @@ html {
 }
 
 .App {
-   background-image: url("../src/assets/bckg.png");
+   background-image: url("../src/assets/bckg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

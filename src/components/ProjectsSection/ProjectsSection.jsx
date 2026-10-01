@@ -1,8 +1,8 @@
 import React from "react";
 import "./ProjectsSection.css";
-import flavorFiestaImg from "../../assets/flavor-fiesta.png";
-import movieRatingImg from "../../assets/movie-rating-app.png";
-import invioraImg from "../../assets/invioraImg.png";
+import flavorFiestaImg from "../../assets/flavor-fiesta.webp";
+import movieRatingImg from "../../assets/movie-rating-app.webp";
+import invioraImg from "../../assets/invioraImg.webp";
 
 export default function ProjectsSection() {
   const projects = [
@@ -31,7 +31,7 @@ export default function ProjectsSection() {
       <div className="projectsSectionContent">
         <h1 className="projectsSectionTitle">My recent projects</h1>
         <p className="projectsSectionDescription">
-          These are a selection of my recent works.
+          This is a selection of my recent works.
         </p>
         <div className="projectsList">
           {projects.map((project, index) => (

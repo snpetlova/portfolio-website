@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Projects.css";
 import Footer from "../../components/Footer/Footer";
-import flavorFiestaImg from "../../assets/flavor-fiesta.png";
-import movieRatingImg from "../../assets/movie-rating-app.png";
-import memoryGameImg from "../../assets/memory-game.png";
-import photographerImg from "../../assets/photographer.png";
-import onlineMarketImg from "../../assets/online-marketplace.png";
+import flavorFiestaImg from "../../assets/flavor-fiesta.webp";
+import movieRatingImg from "../../assets/movie-rating-app.webp";
+import memoryGameImg from "../../assets/memory-game.webp";
+import photographerImg from "../../assets/photographer.webp";
+import onlineMarketImg from "../../assets/online-marketplace.webp";
 import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
-import financeTrackerImg from "../../assets/finance-tracker.png";
-import vistarailImg from "../../assets/vistarailImg.png";
-import invioraImg from "../../assets/invioraImg.png";
+import financeTrackerImg from "../../assets/finance-tracker.webp";
+import vistarailImg from "../../assets/vistarailImg.webp";
+import invioraImg from "../../assets/invioraImg.webp";
 
 export default function Projects() {
   const projects = [
@@ -57,7 +57,7 @@ export default function Projects() {
       link: "#",
       image: onlineMarketImg,
       description:
-        "User Interface Design for a online marketplace. Shows pages like Categories, Cart and Articles section.",
+        "User Interface Design for an online marketplace. Shows pages like Categories, Cart and Articles section.",
     },
     {
       id: 6,
@@ -123,6 +123,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.title}
                     className="projectsPageImage"
+                    loading="lazy"
                   />
                 </div>
                 <div className="projectDetails">

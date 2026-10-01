@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import profilePic from "../../assets/profilePic.jpg";
+import profilePic from "../../assets/profilePic.webp";
 
 export default function Hero() {
   const handleScroll = () => {
