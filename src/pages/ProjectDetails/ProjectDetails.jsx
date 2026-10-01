@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./ProjectDetails.css";
 import { useParams } from "react-router-dom";
 import flavorFiestaImg from "../../assets/flavor-fiesta.png";
@@ -36,7 +36,8 @@ const projects = [
       "k3s (Kubernetes) on a NAS",
       "Figma",
     ],  
-    deployedAppLink: "/",
+    deployedAppLink: null,
+    comingSoon: true,
     overview: [
       { label: "Role", value: "Brand, UX/UI design & development" },
       { label: "Status", value: "Launching soon" },
@@ -370,6 +371,7 @@ function CaseStudy({ project }) {
 export default function ProjectDetails() {
   const { projectId } = useParams();
   const project = projects.find((p) => p.id === parseInt(projectId));
+  const comingSoonDialog = useRef(null);
 
   if (!project) {
     return <div>Project not found</div>;
@@ -424,6 +426,15 @@ export default function ProjectDetails() {
                 LAUNCH APP
               </a>
             )}
+            {project.comingSoon && (
+              <button
+                type="button"
+                className="buttonLink buttonLink-launchApp"
+                onClick={() => comingSoonDialog.current.showModal()}
+              >
+                LAUNCH APP
+              </button>
+            )}
             {project.behanceLink && (
               <a
                 href={project.behanceLink}
@@ -437,6 +448,34 @@ export default function ProjectDetails() {
           </div>
         </div>
       </div>
+      {project.comingSoon && (
+        <dialog
+          ref={comingSoonDialog}
+          className="comingSoonDialog"
+          aria-labelledby="comingSoonTitle"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) e.currentTarget.close();
+          }}
+        >
+          <div className="comingSoonContent">
+            <span className="caseStudyLabel">Coming soon</span>
+            <h2 id="comingSoonTitle" className="comingSoonTitle">
+              {project.title} will be live soon
+            </h2>
+            <p className="comingSoonText">
+              The product is in its final stages before launch. Check back
+              soon to see it live.
+            </p>
+            <button
+              type="button"
+              className="comingSoonClose"
+              onClick={() => comingSoonDialog.current.close()}
+            >
+              Got it
+            </button>
+          </div>
+        </dialog>
+      )}
       <Footer />
     </div>
   );

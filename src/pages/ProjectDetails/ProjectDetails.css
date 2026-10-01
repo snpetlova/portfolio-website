@@ -78,6 +78,81 @@
   margin-top: 40px;
 }
 
+button.buttonLink {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.comingSoonDialog {
+  margin: auto;
+  width: min(440px, calc(100% - 32px));
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  background: var(--background-color-2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.comingSoonDialog[open] {
+  animation: comingSoonIn 0.25s ease-out;
+}
+
+.comingSoonDialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.comingSoonContent {
+  padding: 36px 32px 32px;
+  text-align: center;
+}
+
+.comingSoonTitle {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.comingSoonText {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-gray-text);
+}
+
+.comingSoonClose {
+  margin-top: 28px;
+  padding: 12px 32px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-black);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.comingSoonClose:hover {
+  opacity: 0.8;
+}
+
+@keyframes comingSoonIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .projectDetailsContainer {
     padding: 40px 15px;
