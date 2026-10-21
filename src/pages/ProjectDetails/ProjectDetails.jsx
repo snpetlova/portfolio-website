@@ -36,11 +36,12 @@ const projects = [
       "k3s (Kubernetes) on a NAS",
       "Figma",
     ],  
-    deployedAppLink: null,
-    comingSoon: true,
+    deployedAppLink: "https://inviora-bg.com",
+    confirmLeave: true,
     overview: [
       { label: "Role", value: "Brand, UX/UI design & development" },
-      { label: "Status", value: "Launching soon" },
+      { label: "Status", value: "Live" },
+      { label: "Website", value: "inviora-bg.com", href: "https://inviora-bg.com" },
       { label: "Occasions", value: "Weddings & proms (more to come)" },
       { label: "Languages", value: "Bulgarian & English" },
     ],
@@ -110,7 +111,7 @@ const projects = [
       },
       {
         heading: "Under the hood",
-        text: "Everything runs in one Next.js app: the shop, the details form, my admin panel and every customer's invitation. When someone visits names.inviora.bg, the app works out whose invitation that is and shows it. That means adding a new customer is just a new row in the database, with no deploy needed. Photos and data live on my own server at home. For payments and email I use hosted services, because those are things I'd rather not run myself.",
+        text: "Everything runs in one Next.js app: the shop, the details form, my admin panel and every customer's invitation. When someone visits names.inviora-bg.com, the app works out whose invitation that is and shows it. That means adding a new customer is just a new row in the database, with no deploy needed. Photos and data live on my own server at home. For payments and email I use hosted services, because those are things I'd rather not run myself.",
       },
     ],
   },
@@ -272,7 +273,7 @@ const projects = [
 
 const toParagraphs = (text) => [].concat(text || []);
 
-function CaseStudy({ project }) {
+function CaseStudy({ project, onExternalLink }) {
   return (
     <div className="caseStudy">
       <p className="caseStudyIntro">{project.details}</p>
@@ -282,7 +283,21 @@ function CaseStudy({ project }) {
           {project.overview.map((item) => (
             <div key={item.label} className="caseStudyOverviewItem">
               <dt className="caseStudyLabel">{item.label}</dt>
-              <dd className="caseStudyOverviewValue">{item.value}</dd>
+              <dd className="caseStudyOverviewValue">
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    className="caseStudyOverviewLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onExternalLink}
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  item.value
+                )}
+              </dd>
             </div>
           ))}
         </dl>
@@ -372,11 +387,17 @@ function CaseStudy({ project }) {
 export default function ProjectDetails() {
   const { projectId } = useParams();
   const project = projects.find((p) => p.id === parseInt(projectId));
-  const comingSoonDialog = useRef(null);
+  const leaveSiteDialog = useRef(null);
 
   if (!project) {
     return <div>Project not found</div>;
   }
+
+  const confirmLeave = (e) => {
+    if (!project.confirmLeave) return;
+    e.preventDefault();
+    leaveSiteDialog.current.showModal();
+  };
 
   return (
     <div>
@@ -392,7 +413,7 @@ export default function ProjectDetails() {
             />
           </div>
           {project.caseStudy ? (
-            <CaseStudy project={project} />
+            <CaseStudy project={project} onExternalLink={confirmLeave} />
           ) : (
             <>
               <p className="projectDetailsText">{project.details}</p>
@@ -423,18 +444,10 @@ export default function ProjectDetails() {
                 className="buttonLink buttonLink-launchApp"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={confirmLeave}
               >
                 LAUNCH APP
               </a>
-            )}
-            {project.comingSoon && (
-              <button
-                type="button"
-                className="buttonLink buttonLink-launchApp"
-                onClick={() => comingSoonDialog.current.showModal()}
-              >
-                LAUNCH APP
-              </button>
             )}
             {project.behanceLink && (
               <a
@@ -449,31 +462,43 @@ export default function ProjectDetails() {
           </div>
         </div>
       </div>
-      {project.comingSoon && (
+      {project.confirmLeave && (
         <dialog
-          ref={comingSoonDialog}
-          className="comingSoonDialog"
-          aria-labelledby="comingSoonTitle"
+          ref={leaveSiteDialog}
+          className="leaveSiteDialog"
+          aria-labelledby="leaveSiteTitle"
           onClick={(e) => {
             if (e.target === e.currentTarget) e.currentTarget.close();
           }}
         >
-          <div className="comingSoonContent">
-            <span className="caseStudyLabel">Coming soon</span>
-            <h2 id="comingSoonTitle" className="comingSoonTitle">
-              {project.title} will be live soon
+          <div className="leaveSiteContent">
+            <span className="caseStudyLabel">External link</span>
+            <h2 id="leaveSiteTitle" className="leaveSiteTitle">
+              You are leaving this website
             </h2>
-            <p className="comingSoonText">
-              The product is in its final stages before launch. Check back
-              soon to see it live.
+            <p className="leaveSiteText">
+              You're about to visit{" "}
+              {new URL(project.deployedAppLink).hostname}, which will open in a
+              new tab.
             </p>
-            <button
-              type="button"
-              className="comingSoonClose"
-              onClick={() => comingSoonDialog.current.close()}
-            >
-              Got it
-            </button>
+            <div className="leaveSiteActions">
+              <button
+                type="button"
+                className="leaveSiteButton leaveSiteButton-secondary"
+                onClick={() => leaveSiteDialog.current.close()}
+              >
+                Stay here
+              </button>
+              <a
+                href={project.deployedAppLink}
+                className="leaveSiteButton"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => leaveSiteDialog.current.close()}
+              >
+                Continue
+              </a>
+            </div>
           </div>
         </dialog>
       )}
