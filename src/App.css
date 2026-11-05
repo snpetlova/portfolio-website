@@ -5,8 +5,8 @@
   --color-white: #ffffff;
   --color-gray-text: #4d4d4d;
   --color-gray-btns: #d9d9d9;
+  --color-lime: #c6f567;
   --color-bg-footer: #141414;
-  --color-footer-btns: #323232;
   --color-footer-text: #dadada;
   --color-success: #0a8a0a;
   --color-error: #c0392b;
@@ -63,7 +63,7 @@ html {
   margin: auto;
   width: 50px;
   height: 50px;
-  background: var(--color-gray-btns);
+  background: var(--color-lime);
   border-radius: 50%;
   z-index: -1;
   transition: all 0.3s ease;
@@ -78,4 +78,50 @@ html {
 .buttonLink:hover::before {
   width: 130%;
   border-radius: 30px;
+}
+
+.markerHighlight {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.markerHighlight::before {
+  content: "";
+  position: absolute;
+  inset: 0.14em -0.1em 0.04em -0.12em;
+  z-index: -1;
+  background-color: var(--color-lime);
+  border-radius: 0.5em 0.14em 0.4em 0.1em / 0.16em 0.4em 0.12em 0.34em;
+  transform: rotate(-1.2deg) skewX(-8deg);
+}
+
+.selectionBox {
+  --handle-size: 7px;
+  --selection-color: var(--color-lime);
+  position: relative;
+  display: inline-block;
+  margin: 0 4px;
+  padding: 1px 10px;
+  border: 1.6px solid var(--selection-color);
+  line-height: 1;
+}
+
+.selectionBox::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--handle-size) / -2 - 0.8px);
+  background:
+    linear-gradient(var(--selection-color) 0 0) 0 0,
+    linear-gradient(var(--selection-color) 0 0) 100% 0,
+    linear-gradient(var(--selection-color) 0 0) 0 100%,
+    linear-gradient(var(--selection-color) 0 0) 100% 100%;
+  background-size: var(--handle-size) var(--handle-size);
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.selectionBox-filled {
+  --selection-color: var(--color-black);
+  background-color: var(--color-lime);
 }

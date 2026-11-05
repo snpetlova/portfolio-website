@@ -21,7 +21,9 @@ export default function Footer() {
         <h1 className="footerTitle">Let's work together.</h1>
         <p className="footerDescription">I’m available for freelance work.</p>
         <a href="/contact" className="buttonLink buttonLink-footer">
-          SAY HELLO
+          <span>
+            <span className="footerButtonOnCircle">SAY</span> HELLO
+          </span>
         </a>
       </div>
       <div className="footerLinks">

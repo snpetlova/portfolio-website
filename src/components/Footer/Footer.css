@@ -29,29 +29,20 @@
 }
 
 .buttonLink-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
   color: var(--color-white);
-  padding: 10px 20px;
 }
 
 .buttonLink-footer::before {
-  content: "";
-  position: absolute;
-  left: 150px;
-  top: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  background: var(--color-footer-btns);
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.3s ease;
+  left: -16px;
 }
-.buttonLink-footer:hover::before {
-  width: 31%;
+
+.buttonLink-footer:hover {
+  color: var(--color-black);
+}
+
+.footerButtonOnCircle {
+  color: var(--color-black);
 }
 
 .footerLinks {
@@ -131,16 +122,6 @@
   .footerDescription {
     font-size: 16px;
     margin-bottom: 30px;
-  }
-
-  .buttonLink-footer::before {
-    left: 100px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .buttonLink-footer:hover::before {
-    width: 41%;
   }
 
   .footerLinks {

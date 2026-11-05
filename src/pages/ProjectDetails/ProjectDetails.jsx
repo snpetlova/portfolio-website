@@ -10,10 +10,9 @@ import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
 import financeTrackerImg from "../../assets/finance-tracker.webp";
 import Footer from "../../components/Footer/Footer";
 import vistarailImg from "../../assets/vistarailImg.webp";
-import invioraImg from "../../assets/invioraImg.webp";
+import barefootsenseImg from "../../assets/barefootsenseImg.webp";
 import invioraImg2 from "../../assets/invioraImg2.webp";
 import invioraMacMockup from "../../assets/invioraMacMockup.webp";
-import invioraPhoneMockup from "../../assets/invioraPhoneMockup.webp";
 import invioraVisualIdentity from "../../assets/invioraVisualIdentity.webp";
 
 const projects = [
@@ -162,7 +161,7 @@ const projects = [
 
   {
     id: 4,
-    title: "Social Media Design",
+    title: "Social Media Design: VistaRail",
     category: "Graphic Design",
     image: vistarailImg,
     details:
@@ -210,24 +209,15 @@ const projects = [
     behanceLink:
       "https://www.behance.net/gallery/149940481/Photographer-Website-Design-FIGMA",
   },
-
   {
     id: 8,
-    title: "Recipes Website",
-    category: "WEB APP",
-    image: projectPlaceholderImg,
+    title: "Social Media Design: Barefoot Sense",
+    category: "Graphic Design",
+    image: barefootsenseImg,
     details:
-      "This is a Java Spring project for a recipe website developed as a university project. Some of its features include user registration and authentication, ability for registered users to add new recipes, add existing ones to favourites, and remove from favourites.",
-    toolsAndTechnologies: [
-      "Java",
-      "Spring Framework",
-      "Thymeleaf",
-      "MySQL",
-      "HTML",
-      "CSS",
-      "Bootstrap",
-    ],
-    sourceCodeLink: "https://github.com/snpetlova/java-recipe-site",
+      "Barefoot Sense specializes in barefoot shoes for adults and children. For their social media, I designed a series of posts covering product promotions, trend highlights, and event announcements. Warm, earthy tones, lifestyle imagery, and consistent use of the logo tie the posts together into a cohesive visual identity across Instagram and other digital platforms.",
+    toolsAndTechnologies: ["Figma", "Photoshop"],
+    sourceCodeLink: null,
     deployedAppLink: null,
     behanceLink: null,
   },
@@ -272,6 +262,17 @@ const projects = [
 ];
 
 const toParagraphs = (text) => [].concat(text || []);
+
+const splitTitle = (title) => {
+  if (title.includes(": ")) {
+    const [start, end] = title.split(": ");
+    return [`${start}:`, end];
+  }
+
+  const words = title.split(" ");
+  const middle = Math.floor(words.length / 2);
+  return [words.slice(0, middle).join(" "), words.slice(middle).join(" ")];
+};
 
 function CaseStudy({ project, onExternalLink }) {
   return (
@@ -399,11 +400,15 @@ export default function ProjectDetails() {
     leaveSiteDialog.current.showModal();
   };
 
+  const [titleStart, titleEnd] = splitTitle(project.title);
+
   return (
     <div>
       <div className="projectDetailsContainer">
         <div className="projectDetailsContent">
-          <h1 className="projectDetailsTitle">{project.title}</h1>
+          <h1 className="projectDetailsTitle">
+            {titleStart} <span className="markerHighlight">{titleEnd}</span>
+          </h1>
           <p className="projectDetailsCategory">{project.category}</p>
           <div className="projectDetailsImageContainer">
             <img

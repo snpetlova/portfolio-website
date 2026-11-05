@@ -11,6 +11,7 @@ import projectPlaceholderImg from "../../assets/project-placeholder.jpg";
 import financeTrackerImg from "../../assets/finance-tracker.webp";
 import vistarailImg from "../../assets/vistarailImg.webp";
 import invioraImg from "../../assets/invioraImg.webp";
+import barefootsenseImg from "../../assets/barefootsenseImg.webp";
 
 export default function Projects() {
   const projects = [
@@ -43,7 +44,7 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "Social Media Design",
+      title: "Social Media Design: VistaRail",
       category: "Graphic Design",
       link: "https://www.instagram.com/vistarail/",
       image: vistarailImg,
@@ -77,15 +78,13 @@ export default function Projects() {
       description:
         "User Interface Design for a photographer website. It shows pages as About, Portfolio, Prices and Contact.",
     },
-
     {
       id: 8,
-      title: "Recipes Website",
-      category: "WEB APP",
+      title: "Social Media Design: Barefoot Sense",
+      category: "Graphic Design",
       link: "#",
-      image: projectPlaceholderImg,
-      description:
-        "This is a Java Spring project for a recipe website developed as a university project.",
+      image: barefootsenseImg,
+      description: "Graphic design for social media, showcasing visual identity across Instagram and other digital platforms.",
     },
     {
       id: 9,
@@ -111,31 +110,35 @@ export default function Projects() {
     <div>
       <div className="projectsPageContainer">
         <div className="projectsPageContent">
-          <h1 className="projectsPageTitle">My Work</h1>
+          <h1 className="projectsPageTitle">
+            MY <span className="selectionBox selectionBox-filled">WORK</span>
+          </h1>
           <p className="projectsPageDescription">
             Here is a list of my projects.
           </p>
           <div className="projectsGrid">
             {projects.map((project) => (
-              <div key={project.id} className="projectCard">
-                <div className="projectsPageImageContainer">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="projectsPageImage"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="projectDetails">
-                  <h2 className="projectTitle">{project.title}</h2>
-                  <p className="projectCategory">{project.category}</p>
-                  <p className="projectDescription">{project.description}</p>
-                  <Link
-                    to={`/projects/${project.id}`}
-                    className="buttonLink buttonLink-projects"
-                  >
-                    VIEW PROJECT
-                  </Link>
+              <div key={project.id} className="projectCardWrapper">
+                <div className="projectCard">
+                  <div className="projectsPageImageContainer">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="projectsPageImage"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="projectDetails">
+                    <h2 className="projectTitle">{project.title}</h2>
+                    <p className="projectCategory">{project.category}</p>
+                    <p className="projectDescription">{project.description}</p>
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="buttonLink buttonLink-projects"
+                    >
+                      VIEW PROJECT
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

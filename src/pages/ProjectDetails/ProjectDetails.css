@@ -12,7 +12,9 @@
   font-size: 35px;
   font-weight: bold;
   color: var(--color-black);
+  margin-bottom: 6px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .projectDetailsCategory {

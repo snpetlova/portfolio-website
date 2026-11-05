@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import githubWhite from "../../assets/github-icon.png";
-import githubBlack from "../../assets/github-icon-black.png";
-import behanceWhite from "../../assets/behance-icon-white.png";
-import behanceBlack from "../../assets/behance-icon.png";
-import linkedinWhite from "../../assets/linkedin-icon.png";
-import linkedinBlack from "../../assets/linkedin-icon-black.png";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,7 +44,9 @@ export default function Contact() {
   };
   return (
     <div className="contactContainer">
-      <h2 className="contactTitle">Get in touch.</h2>
+      <h2 className="contactTitle">
+        Get in <span className="markerHighlight">touch</span>.
+      </h2>
       <p className="contactDescription">
         Do you fancy saying hi to me or you want to get started with your
         project and you need my help? Feel free to contact me.

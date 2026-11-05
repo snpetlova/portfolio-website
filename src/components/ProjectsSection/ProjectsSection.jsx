@@ -29,7 +29,9 @@ export default function ProjectsSection() {
   return (
     <div className="projectsSectionContainer" id="projectsSection">
       <div className="projectsSectionContent">
-        <h1 className="projectsSectionTitle">My recent projects</h1>
+        <h1 className="projectsSectionTitle">
+          MY <span className="selectionBox">RECENT</span> PROJECTS
+        </h1>
         <p className="projectsSectionDescription">
           This is a selection of my recent works.
         </p>

@@ -2,12 +2,25 @@ import React from "react";
 import "./About.css";
 import aboutPic from "../../assets/aboutPic.webp";
 import Footer from "../../components/Footer/Footer";
+import AboutIcon from "./AboutIcon";
 
 const highlights = [
-  { label: "Role", value: "Front-end Developer at Indeavr" },
-  { label: "Focus", value: "UI design & front-end development" },
-  { label: "Education", value: "Technical University of Sofia" },
-  { label: "Certifications", value: "SoftUni: JavaScript, UI & UX Design" },
+  { label: "Role", value: "Front-end Developer at Indeavr", icon: "code" },
+  {
+    label: "Focus",
+    value: "UI design & front-end development",
+    icon: "monitor",
+  },
+  {
+    label: "Education",
+    value: "Technical University of Sofia",
+    icon: "graduationCap",
+  },
+  {
+    label: "Certifications",
+    value: "SoftUni: JavaScript, UI & UX Design",
+    icon: "award",
+  },
 ];
 
 const sections = [
@@ -20,7 +33,7 @@ const sections = [
   {
     heading: "Education",
     text: [
-      "I hold a degree in Computer and Software Engineering from the Technical University of Sofia, as well as a Bachelor's degree in Management and Business Information Systems. This blend of technical and business knowledge helps me look at problems from multiple angles.",
+      "I hold a Master's degree in Computer and Software Engineering from the Technical University of Sofia, as well as a Bachelor's degree in Management and Business Information Systems. This blend of technical and business knowledge helps me look at problems from multiple angles.",
       "Additionally, I have earned multiple certifications from SoftUni in JavaScript, UI, and UX Design, further enhancing my skills and knowledge in the field.",
     ],
   },
@@ -35,6 +48,7 @@ const sections = [
 const tools = [
   {
     category: "Web Development",
+    icon: "code",
     items: [
       "JavaScript",
       "TypeScript",
@@ -58,10 +72,12 @@ const tools = [
   },
   {
     category: "UX/UI Design",
+    icon: "penTool",
     items: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Adobe XD"],
   },
   {
     category: "AI-assisted workflow",
+    icon: "sparkles",
     items: ["Claude Code", "GitHub Copilot"],
   },
 ];
@@ -72,16 +88,20 @@ export default function About() {
       <div className="aboutContainer">
         <div className="aboutContent">
           <div className="introSection">
-            <div className="imageContainer">
-              <img
-                src={aboutPic}
-                alt="Snezhana Petlova"
-                className="aboutImage"
-              />
+            <div className="aboutImageFrame">
+              <div className="imageContainer">
+                <img
+                  src={aboutPic}
+                  alt="Snezhana Petlova"
+                  className="aboutImage"
+                />
+              </div>
             </div>
             <div className="introTextContainer">
-              <span className="aboutLabel">About me</span>
-              <h1 className="introTitle">I’m Snezhana Petlova</h1>
+              <span className="aboutLabel aboutEyebrow">About me</span>
+              <h1 className="introTitle">
+                I’M <span className="markerHighlight">SNEZHANA</span> PETLOVA
+              </h1>
               <p className="introLead">
                 Hello! I'm Snezhi, a passionate Front-end Developer with a
                 strong focus on UI Design and Programming. I love bringing
@@ -91,7 +111,10 @@ export default function About() {
               <dl className="aboutHighlights">
                 {highlights.map((item) => (
                   <div key={item.label} className="aboutHighlight">
-                    <dt className="aboutLabel">{item.label}</dt>
+                    <dt className="aboutLabel">
+                      <AboutIcon name={item.icon} />
+                      {item.label}
+                    </dt>
                     <dd className="aboutHighlightValue">{item.value}</dd>
                   </div>
                 ))}
@@ -117,7 +140,10 @@ export default function About() {
             <div className="aboutSectionBody">
               {tools.map((group) => (
                 <div key={group.category} className="toolGroup">
-                  <h3 className="aboutLabel">{group.category}</h3>
+                  <h3 className="aboutLabel toolGroupHeading">
+                    <AboutIcon name={group.icon} soft />
+                    {group.category}
+                  </h3>
                   <ul className="toolTags">
                     {group.items.map((tool) => (
                       <li key={tool} className="toolTag">

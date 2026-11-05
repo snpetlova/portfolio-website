@@ -42,6 +42,26 @@
   animation: slideInLeft 1s ease-in-out;
 }
 
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-gray-text);
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 3;
+}
+
+.heroEyebrow::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-lime);
+}
+
 .heroTitle {
   font-size: 50px;
   font-weight: bold;
@@ -132,6 +152,71 @@
   filter: blur(8px);
 }
 
+.heroOrbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(124%, 100vw - 12px);
+  overflow: visible;
+  pointer-events: none;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  animation: heroOrbitDrift 16s ease-in-out infinite alternate;
+}
+
+.heroOrbit path {
+  fill: none;
+  stroke: var(--color-lime);
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+
+.heroBadge {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: 17%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-lime);
+  color: #171717;
+  font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  box-shadow: 0 6px 18px rgba(23, 23, 23, 0.1);
+  z-index: 3;
+  animation: heroBadgeFloat 4s ease-in-out infinite alternate;
+}
+
+@keyframes heroOrbitDrift {
+  from {
+    transform: translate(-50%, -50%) rotate(-3deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(3deg);
+  }
+}
+
+@keyframes heroBadgeFloat {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroOrbit,
+  .heroBadge {
+    animation: none;
+  }
+}
+
 .scrollDownButton {
   position: absolute;
   right: -50px;
@@ -159,6 +244,10 @@
   .heroContent {
     animation: none;
     order: 2;
+  }
+
+  .heroEyebrow {
+    justify-content: center;
   }
 
   .heroTitle {
@@ -198,6 +287,10 @@
     height: 320px;
     right: 0;
     margin: 0 auto;
+  }
+
+  .heroBadge {
+    font-size: 17px;
   }
 
   .scrollDownButton {
